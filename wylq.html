@@ -6,12 +6,22 @@
 </head>
 <html>
 <body>
-    <div id="date" >
-            <div>
-                生日：<input id='y' type='text' name='y'>年<input id='m' type='text' name='m'>月<input id='d' type='text' name='d'>日</div>
+    <div style='width:400px;'>
+        <div id="date" >        
+            <div >
+                <p>生日：</p>
+                <p><input id='y' type='text' name='y'>年</p>
+                <p> <input id='m' type='text' name='m'></p>
+                <p><input id='d' type='text' name='d'>日</p>
+                <p><input id='h' type='text' name='h'>点（24小时）</p>
             </div>
+        </div>
     </div>
-    <button type="button" onclick="">点击这里</button>
+    <div id='show'>
+    </div>
+    <div>
+        <button type="button" onclick="showgz()">点击这里</button>
+    </div>
     
 </body>
 </html>
