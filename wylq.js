@@ -147,22 +147,32 @@ function togz(y,m,d,h){
         var re_h=8
     }
 
+    h=parseInt(h)
     if(h%2!=0){
-        h_0=(h+1)/2
+        H_g=(h+1)/2
+        H_z=(h+1)/2
     }else{
-        h_0=h/2
+        H_g=h/2
+        H_z=h/2
     }
    
-    if(h==-1 || h==" "){  //有“时”的输入
+
+
+    if(h==-1 || h==" "){  //无“时”的输入
+        console.log('无时辰的输入')
         H_g=''
         re_h=''
         H_z=''
     }else{
-        H_g=h_0
-        H_z=h_0       
+        console.log('有时辰的输入')
+        // H_g=h_0
+        // H_z=h_0       
     }
 
+    console.log(h,h/2,(h+1)/2,H_z)
+
     var dis_Y_g,dis_Y_z,dis_M_g,dis_M_z,dis_D_g,dis_D_z
+
 
   if(jq_In[0][0]=='冬至'||jq_In[0][0]=='小寒'||jq_In[0][0]=='大寒'){  //处理当年1月份、2月份立春前的日期
     Y_g=Y_g-1
@@ -183,15 +193,20 @@ function togz(y,m,d,h){
         ;
     }
 
+
+   
     var gz=[dis_Y_g,dis_Y_z,dis_M_g,dis_M_z,dis_D_g,dis_D_z,dis_H_g,dis_H_z]
+
+    console.log(gz)
+
     for(i=0;i<gz.length;i++){
         if(typeof(gz[i])=='undefined'||gz[i]==-1){  //时间未输入，赋值为空
             gz[i]=' '
         }
     }
 
-    // console.log(gz)
-
+ 
+    console.log(gz)
     return gz
 
 }
